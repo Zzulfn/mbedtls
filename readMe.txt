@@ -9,7 +9,10 @@
      1.2 TLS服务器搭建：GCM
           搭建服务器： s_server --state -cert srv_cert.pem -key srv_privkey.pem -CAfile ca_cert.pem -port 443 -clipher ECDHE-ECDSA-AES256-GCM-SHA384 -www ./
           由于要制作相关证书秘钥此处后面实现。
-           
+
+ 2） mebedtls介绍： 采用Apache 2.0 许可协议开源软件加密库。其包括密码学算法，X509证书，TLS/DTLS协议。
+       
+
 2）单向散列函数
 
 3）对称加密算法
