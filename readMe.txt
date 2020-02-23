@@ -26,7 +26,14 @@
            3.2.4 数字签名。先将数据经行计算摘要，然后对摘要经行签名。
 
      3.3 成员：MD4/MD5 hash1 以找到破解方法。hash 256 hash384 hash 512 没有被破解
-
+          3.3.1   通用接口：mbedtls_md_context 结构体
+          3.3.2   mbedtls_md_infor_t *info,
+          3.3.3   mbedtls_md_init();// 设为0.
+          3.3.4   mbedtls_md_setup；
+          3.3.5   mbedtls_md_starts; //start 
+          3.3.6   mbedtls_md_update // 可以多次使用
+          3.3.7   mbedtls_md_finish;
+          3.3.8   free
                     
                         
 3）对称加密算法
