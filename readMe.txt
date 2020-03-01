@@ -47,9 +47,14 @@
        5.3  CCM 一次性数据，相关数据，明文， 分组， CBC-MAC 得到tag, to tag CTR 得到T. 对明文进行CTR。
        5.4  GCM 把CBC-MAC 转换为，GF域。在用GCTR。加密。
        
-5）伪随机数生成器
+6）伪随机数生成器
+      6.1）真：好，满。 假：滴源，外部结构。实际应用中真作为种子，  再通过为随机数生成序列号。
+      6.2）生成初始化向量，秘钥，一次性整数。
+      6.3） CTR_DRBG 算法。
+       
 
 6）RSA算法
+     
 
 7）DH秘钥协商
 
@@ -60,6 +65,16 @@
 10）数字证书X.509
 
 11) TLS 
+      11.1 TLS 又分TL记录协议，握手协议，密码变更协议，警告协议，应用数据协议。其格式为再TCPValue 断： type-- version --length 
+      11.2 TLS握手协议 
+              完整握手：
+               1）client  -> server: 我的版本号,我所支持的密码套件,随机数.可选：曲线，坐标， 签名算法，散列函数， 先加密后mCA还是先MAC，后加密
+               2）server -> client: 提供32位随机数。1中选一个密码套件。
+               3）server -> client: 发送服务器证书，或中间证书。 根证书客户端自己获取。
+               4）server -> client: serverKeyExchange:如果使用ECDHE ze则通过这个告诉他。零时公钥匙。及相关参数。
+               5）server -> client: 
+              会话恢复：
+              
 
 12) COAPS
 
